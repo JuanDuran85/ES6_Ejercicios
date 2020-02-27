@@ -199,8 +199,3 @@ Para mayor informacion, pueden visitar:
 
 * [Módulos ES6](https://lenguajejs.com/p/javascript/caracteristicas/modulos-es6).
 * [ES6 Modules](https://desarrolloweb.com/articulos/es6-modules.html)
-
-
-
-
-3. Investigar y socializar: Paradigma Funcional, Recursividad, Programacion orientada a Eventos, Concurrencia y procesos paralelos, callbacks.
