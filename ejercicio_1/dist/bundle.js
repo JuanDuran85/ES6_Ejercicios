@@ -86,14 +86,51 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/funciones/funciones.js":
+/*!************************************!*\
+  !*** ./src/funciones/funciones.js ***!
+  \************************************/
+/*! exports provided: saludo, saludo2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saludo\", function() { return saludo; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saludo2\", function() { return saludo2; });\nfunction saludo(mensaje) {\n  console.log(\"Hola \" + mensaje + \" Bienvenidos\");\n}\nvar saludo2 = function saludo2(mensaje) {\n  return console.log(\"Hola \" + mensaje + \" Bienvenidos\");\n};\n\n//# sourceURL=webpack:///./src/funciones/funciones.js?");
+
+/***/ }),
+
+/***/ "./src/funciones/funciones2.js":
+/*!*************************************!*\
+  !*** ./src/funciones/funciones2.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction saludar(nombre) {\n  alert('Hola ' + nombre);\n}\n\nfunction procesarEntradaUsuario(callback) {\n  var nombre = prompt('Por favor ingresa tu nombre.');\n  callback(nombre);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (procesarEntradaUsuario(saludar));\n\n//# sourceURL=webpack:///./src/funciones/funciones2.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var numero = 20;\nvar numero2 = 30;\nvar numero3 = 234;\nconsole.log(numero2);\n\nfor (var _numero = 0; _numero < 10; _numero++) {\n  console.log(_numero);\n}\n\nconsole.log(numero);\nconsole.log(numero2);\nconsole.log(numero3);\nalert(\"El numero 1 es: \".concat(numero, \" como constante y el numero dos es: \").concat(numero2));\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funciones_funciones__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funciones/funciones */ \"./src/funciones/funciones.js\");\n/* harmony import */ var _tiempo_contadores__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tiempo/contadores */ \"./src/tiempo/contadores.js\");\n/* harmony import */ var _funciones_funciones2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./funciones/funciones2 */ \"./src/funciones/funciones2.js\");\n\n\n\nvar numero = 20;\nvar numero2 = 30;\nvar numero3 = 234;\nconsole.log(numero2);\n\nfor (var _numero = 0; _numero < 10; _numero++) {\n  console.log(_numero);\n}\n\nconsole.log(numero);\nconsole.log(numero2);\nconsole.log(numero3);\nalert(\"El numero 1 es: \".concat(numero, \" como constante y el numero dos es: \").concat(numero2));\nObject(_funciones_funciones__WEBPACK_IMPORTED_MODULE_0__[\"saludo\"])(\"a todos\");\nObject(_funciones_funciones__WEBPACK_IMPORTED_MODULE_0__[\"saludo2\"])(\"señores y señoras\");\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/tiempo/contadores.js":
+/*!**********************************!*\
+  !*** ./src/tiempo/contadores.js ***!
+  \**********************************/
+/*! exports provided: llamado */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"llamado\", function() { return llamado; });\nvar llamado = setTimeout(mensaje, 7000);\n\nfunction mensaje() {\n  console.log(\"llamado desde archivo de contadores\");\n}\n\n\n\n//# sourceURL=webpack:///./src/tiempo/contadores.js?");
 
 /***/ })
 

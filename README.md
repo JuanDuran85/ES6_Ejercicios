@@ -185,8 +185,22 @@ module: {
 }
 ```
 
-Primera actividad para hoy:
+# Módulos en JS
 
-2. Ejemplos utilizando ES6 Modular con import y export. (parecido al desafío de hoy)
+En ECMAScript 6 se introduce una característica nativa denominada Módulos ES6, que permite la importación y exportación de código entre diferentes ficheros Javascript, eliminando las desventajas que teníamos hasta ahora y permitiendo trabajar de forma más flexible desde el código Javascript.
+
+Para trabajar con módulos tenemos a nuestra disposición las siguientes palabras clave:
+
+* export: Exporta uno o varios elementos (variables, funciones, clases...) del fichero actual.
+
+* import: Importa uno o varios elementos (variables, funciones, clases...) desde otro fichero .js
+
+Para mayor informacion, pueden visitar:
+
+* [Módulos ES6](https://lenguajejs.com/p/javascript/caracteristicas/modulos-es6).
+* [ES6 Modules](https://desarrolloweb.com/articulos/es6-modules.html)
+
+
+
 
 3. Investigar y socializar: Paradigma Funcional, Recursividad, Programacion orientada a Eventos, Concurrencia y procesos paralelos, callbacks.
