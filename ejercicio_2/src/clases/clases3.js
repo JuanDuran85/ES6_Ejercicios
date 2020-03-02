@@ -63,3 +63,32 @@ p2.mostrarX();
 p2.mostrarY();
 
 console.log (`La distancia entre dos puntos es: ${Punto.distancia(p1, p2)}`); 
+
+console.log('//-----------Clase Animal-----------------//');
+
+export class Animal {
+  constructor(n) {
+    this.nombre = n;
+  }
+
+  get nombre() {
+    return `El perro es: ${this._nombre}`;
+  }
+
+  set nombre(n) {
+    this._nombre = n.trim();
+  }
+
+  quienSoy() {
+    return `Hola, soy ${this.nombre}`;
+  }
+}
+
+// Creación de objetos
+var perro = new Animal('Pastor Aleman');
+
+console.log(perro.nombre);
+console.log(perro.quienSoy());
+console.log(perro.nombre= '   Lucas  ');
+console.log(perro.nombre);
+console.log(perro.quienSoy());
