@@ -57,7 +57,6 @@ export class Cuadrado {
 };
 
 function imprimirCuadrado (cuadrado) {
-	//El operador instanceof verifica si un objeto en su cadena de prototipos contiene la propiedad prototype de un constructor.
 	if (!(typeof(cuadrado.obtenerArea()) == "number")) {
 		console.error(`El parametro enviado no es un cuadrado`);
 	}else{
