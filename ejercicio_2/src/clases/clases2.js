@@ -45,3 +45,26 @@ let objeto = creadorClase(class{
 
 objeto.saludar();
 
+// ------------ clases como parametros 2------------- //
+export class Cuadrado {
+	constructor(lado){
+		this.lado = lado;
+	}
+
+	obtenerArea(){
+		return this.lado * this.lado;
+	}
+};
+
+function imprimirCuadrado (cuadrado) {
+	//El operador instanceof verifica si un objeto en su cadena de prototipos contiene la propiedad prototype de un constructor.
+	if (!(typeof(cuadrado.obtenerArea()) == "number")) {
+		console.error(`El parametro enviado no es un cuadrado`);
+	}else{
+		console.log(`El cuadro del número es: ${cuadrado.obtenerArea()}`);
+	}
+};
+
+let cuadrado = new Cuadrado(5);
+//let cuadrado = 1234; // si no se inicializa la clase, da error en la funcion
+imprimirCuadrado(cuadrado);

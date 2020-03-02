@@ -220,3 +220,16 @@ Creación del objeto o inicio de un objeto a partir de una clase.
 * ¿Qué es un método?
 
 Operación que se realiza en el objeto, instrucciones.
+
+## Clases y sus metodos en ES6.
+
+### Método static en ES6
+
+Un método estático se construye simplemente indicando la palabra "static" antes del nombre del método que se está creando. El resto de la definición de un método estático sería igual que la definición de un método convencional, con la excepción de disponer de la variable "this" como habitualmente en los métodos. 
+
+Los métodos estáticos se suelen utilizar para crear funciones de apoyo que realicen tareas concretas o genéricas, que queremos incluir en la clase porque están relacionadas con la clase en cuestión, es decir, que pueden ser invocados desde la clase sin necesidad de que se cree una instancia de la misma. Para ello tenemos que poner la palabra static antes del nombre del método.
+
+Nota: El hecho de no poder disponer de "this" dentro de un método estático es debido a que el método no se invoca con relación a ningún objeto.
+
+## Para mayor información, visita:
+* [Caracteristicas de las clases en ES6](https://lenguajejs.com/p/javascript/caracteristicas/clases-es6)
