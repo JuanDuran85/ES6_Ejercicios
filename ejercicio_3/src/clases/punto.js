@@ -1,3 +1,6 @@
+
+/* realizar un programa mediante clases que muestre la distancia entre dos puntos en el plano cartesiano ingresados en la creación de la instancia de la clase, utilizar el metodo static para calcular la distancia */
+
 export class Punto {
     constructor ( x , y ){
       this.x = x;
@@ -11,49 +14,40 @@ export class Punto {
     mostrarY(){
         console.log(this.y);
     }
-  
-    static distancia ( a , b) {
-      const dx = a.x - b.x;
-      const dy = a.y - b.y;
-      return Math.sqrt ( dx * dx + dy * dy );
+  //Los métodos estáticos se suelen utilizar para crear funciones de apoyo que realicen tareas concretas o genéricas, que queremos incluir en la clase porque están relacionadas con la clase en cuestión, es decir, que pueden ser invocados desde la clase sin necesidad de que se cree una instancia de la misma.
+    static distancia () {
+        alert("mensaje desde metodo estatico")
     }
   }
-  
-  const p1 = new Punto(3, 6);
-  const p2 = new Punto(1, -13);
-  p1.mostrarX();
-  p1.mostrarY();
-  p2.mostrarX();
-  p2.mostrarY();
-
-  console.log (`La distancia entre dos puntos es: ${Punto.distancia(p1, p2)}`); 
+ 
+  console.log (`La distancia entre dos puntos es: ${Punto.distancia()}`); 
 
 console.log('//--------Clase Animal---------//');
 
 export class Animal {
-  constructor(n) {
-    this.nombre = n;
+  constructor(nombre_perro) {
+    this.nombre2 = nombre_perro;
   }
 
   get nombre() {
-    return `El perro es: ${this._nombre}`;
+    return `El perro es: ${this._nombre2}`;
   }
 
-  set nombre(n) {
+  set nombre(nombre_perro) {
     /*en lugar de hacer referencia al mismo nombre, se puede usar el patrón de prefijar cada variable local con un guión bajo, en comparación con el nombre público. */
-    this._nombre = n.trim();
+    this._nombre2 = nombre_perro.trim();
   }
 
   quienSoy() {
-    return `Hola, soy ${this.nombre}`;
+    return `Hola, soy ${this.nombre2}`;
   }
 }
 
 // Creación de objetos
 var perro = new Animal('Pastor Aleman');
 
-console.log(perro.nombre);
+console.log(perro.nombre2);
 console.log(perro.quienSoy());
-console.log(perro.nombre= '   Lucas  ');
+console.log(perro.nombre = '   Lucas  ');
 console.log(perro.nombre);
 console.log(perro.quienSoy());

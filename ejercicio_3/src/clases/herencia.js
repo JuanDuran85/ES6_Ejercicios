@@ -31,4 +31,5 @@ export class Forma {
     }
   }
 
-  let formas = new Forma();
+  //let formas = new Forma();
+  let cuadrado = new Cuadrado();
