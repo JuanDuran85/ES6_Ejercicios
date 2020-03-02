@@ -1,4 +1,9 @@
 node_modules
 .vscode
+<<<<<<< HEAD
 ejercicio_1/node_modules
 ejercicio_2/node_modules
+=======
+ejercicio_2/node_modules
+ejercicio_1/node_modules
+>>>>>>> e218f61bf2077ea63ca4ee64546817fb3cc39a98

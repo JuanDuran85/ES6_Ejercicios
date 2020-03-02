@@ -50,23 +50,9 @@ Posteriormente, se debe crear un archivo de configuración llamado “babel.conf
 
 *Nota*: La lista de navegadores anterior es solo un ejemplo arbitrario. Tendrá que adaptarlo para los navegadores que desea admitir.
 
-Por último, ejecutando este comando para compilar todo su código del directorio src a lib:
-
-```bash
-./node_modules/.bin/babel src --out-dir lib
-```
-
 ## ¿Que es WebPack?
 
 Webpack es un paquete de módulos estáticos para aplicaciones JavaScript modernas. Cuando webpack procesa su aplicación, internamente crea un gráfico de dependencia que asigna cada módulo que su proyecto necesita y genera uno o más paquetes.
-
-## Instalación de ambas herramientas:
-
-Para instalar ambas herramientas en un solo comando en la terminal, se debe ejecutar las siguientes instrucciones:
-
-```bash
-npm i webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/preset-env babel-loader -D
-```
 
 # Instalando Webpack y Babel, pasos:
 
@@ -185,6 +171,14 @@ module: {
 }
 ```
 
+24. Instalar Babel-Loader mediante la instrucción:
+
+```bash
+npm install --save-dev babel-loader @babel/core
+```
+
+25. Ejecutar nuevamente `npm run build` para compilar el proyecto ahora aplicando Babel al código final. 
+
 # Módulos en JS
 
 En ECMAScript 6 se introduce una característica nativa denominada Módulos ES6, que permite la importación y exportación de código entre diferentes ficheros Javascript, eliminando las desventajas que teníamos hasta ahora y permitiendo trabajar de forma más flexible desde el código Javascript.
@@ -200,7 +194,42 @@ Para mayor informacion, pueden visitar:
 * [Módulos ES6](https://lenguajejs.com/p/javascript/caracteristicas/modulos-es6).
 * [ES6 Modules](https://desarrolloweb.com/articulos/es6-modules.html)
 
+# Programación Orientada a Objetos en ES6
 
+* ¿Cuáles son los paradigmas de programación?
+  - Funcional
+  - Imperativo
+  - Lógico
+  - Declarativo
+  - POO
+  - Por Procedimientos.
 
+* ¿Que es el paradigma de programación orientado a objetos?
 
-3. Investigar y socializar: Paradigma Funcional, Recursividad, Programacion orientada a Eventos, Concurrencia y procesos paralelos, callbacks.
+Se plantea que el principal protagonista sean las clases. Colección de objetos que están interrelacionados y trabajan conjuntamente para resolver un problema. Se basa en lo cotidiano para dar posibles soluciones a problemas.
+
+* ¿Qué es una clase? 
+Plantillas para la creación de objetos. Características, atributos, propiedades.
+
+* ¿Qué es un objeto? 
+Tienen los métodos y funciones.
+
+* ¿Qué es una instancia? 
+Creación del objeto o inicio de un objeto a partir de una clase.
+
+* ¿Qué es un método?
+
+Operación que se realiza en el objeto, instrucciones.
+
+## Clases y sus metodos en ES6.
+
+### Método static en ES6
+
+Un método estático se construye simplemente indicando la palabra "static" antes del nombre del método que se está creando. El resto de la definición de un método estático sería igual que la definición de un método convencional, con la excepción de disponer de la variable "this" como habitualmente en los métodos. 
+
+Los métodos estáticos se suelen utilizar para crear funciones de apoyo que realicen tareas concretas o genéricas, que queremos incluir en la clase porque están relacionadas con la clase en cuestión, es decir, que pueden ser invocados desde la clase sin necesidad de que se cree una instancia de la misma. Para ello tenemos que poner la palabra static antes del nombre del método.
+
+Nota: El hecho de no poder disponer de "this" dentro de un método estático es debido a que el método no se invoca con relación a ningún objeto.
+
+## Para mayor información, visita:
+* [Caracteristicas de las clases en ES6](https://lenguajejs.com/p/javascript/caracteristicas/clases-es6)
