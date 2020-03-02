@@ -50,23 +50,9 @@ Posteriormente, se debe crear un archivo de configuración llamado “babel.conf
 
 *Nota*: La lista de navegadores anterior es solo un ejemplo arbitrario. Tendrá que adaptarlo para los navegadores que desea admitir.
 
-Por último, ejecutando este comando para compilar todo su código del directorio src a lib:
-
-```bash
-./node_modules/.bin/babel src --out-dir lib
-```
-
 ## ¿Que es WebPack?
 
 Webpack es un paquete de módulos estáticos para aplicaciones JavaScript modernas. Cuando webpack procesa su aplicación, internamente crea un gráfico de dependencia que asigna cada módulo que su proyecto necesita y genera uno o más paquetes.
-
-## Instalación de ambas herramientas:
-
-Para instalar ambas herramientas en un solo comando en la terminal, se debe ejecutar las siguientes instrucciones:
-
-```bash
-npm i webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/preset-env babel-loader -D
-```
 
 # Instalando Webpack y Babel, pasos:
 
@@ -185,6 +171,14 @@ module: {
 }
 ```
 
+24. Instalar Babel-Loader mediante la instrucción:
+
+```bash
+npm install --save-dev babel-loader @babel/core
+```
+
+25. Ejecutar nuevamente `npm run build` para compilar el proyecto ahora aplicando Babel al código final. 
+
 # Módulos en JS
 
 En ECMAScript 6 se introduce una característica nativa denominada Módulos ES6, que permite la importación y exportación de código entre diferentes ficheros Javascript, eliminando las desventajas que teníamos hasta ahora y permitiendo trabajar de forma más flexible desde el código Javascript.
@@ -199,3 +193,30 @@ Para mayor informacion, pueden visitar:
 
 * [Módulos ES6](https://lenguajejs.com/p/javascript/caracteristicas/modulos-es6).
 * [ES6 Modules](https://desarrolloweb.com/articulos/es6-modules.html)
+
+# Programación Orientada a Objetos en ES6
+
+* ¿Cuáles son los paradigmas de programación?
+  - Funcional
+  - Imperativo
+  - Lógico
+  - Declarativo
+  - POO
+  - Por Procedimientos.
+
+* ¿Que es el paradigma de programación orientado a objetos?
+
+Se plantea que el principal protagonista sean las clases. Colección de objetos que están interrelacionados y trabajan conjuntamente para resolver un problema. Se basa en lo cotidiano para dar posibles soluciones a problemas.
+
+* ¿Qué es una clase? 
+Plantillas para la creación de objetos. Características, atributos, propiedades.
+
+* ¿Qué es un objeto? 
+Tienen los métodos y funciones.
+
+* ¿Qué es una instancia? 
+Creación del objeto o inicio de un objeto a partir de una clase.
+
+* ¿Qué es un método?
+
+Operación que se realiza en el objeto, instrucciones.
