@@ -27,28 +27,6 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env
 npm install --save @babel/polyfill
 ```
 
-Posteriormente, se debe crear un archivo de configuración llamado “babel.config.json” en la raíz de su proyecto con este contenido:
-
-```JS
-{
-  "presets": [
-    [
-      "@babel/env",
-      {
-        "targets": {
-          "edge": "17",
-          "firefox": "60",
-          "chrome": "67",
-          "safari": "11.1",
-        },
-        "useBuiltIns": "usage",
-      }
-    ]
-  ]
-}
-```
-
-*Nota*: La lista de navegadores anterior es solo un ejemplo arbitrario. Tendrá que adaptarlo para los navegadores que desea admitir.
 
 ## ¿Que es WebPack?
 
@@ -153,21 +131,21 @@ npx webpack --config webpack.config.js
  npm install @babel/preset-env --save-dev
 ```
 
-22. Crear en la raiz del repositorio el archivo .babelrc y agregar las siguientes lineas:
+22. Crear en la raiz del repositorio el archivo .babelrc y agregar el json en el archivo .babelr:
+
+```JS
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+23. Agregar lo siguiente al module/exports dentro de webpack.config:
 
 ```JS
 module: {
   rules: [
     { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
   ]
-}
-```
-
-23. Pegar el json en el archivo .babelrc:
-
-```JS
-{
-  "presets": ["@babel/preset-env"]
 }
 ```
 
