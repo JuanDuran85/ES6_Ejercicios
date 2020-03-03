@@ -211,3 +211,42 @@ Nota: El hecho de no poder disponer de "this" dentro de un método estático es 
 
 ## Para mayor información, visita:
 * [Caracteristicas de las clases en ES6](https://lenguajejs.com/p/javascript/caracteristicas/clases-es6)
+
+
+# NodeJS y ExpresJS
+
+Express es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para:
+
+* Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).
+* Integración con motores de renderización de "vistas" para generar respuestas mediante la introducción de datos en plantillas.
+* Establecer ajustes de aplicaciones web como qué puerto usar para conectar, y la localización de las plantillas que se utilizan para renderizar la respuesta.
+* Añadir procesamiento de peticiones "middleware" adicional en cualquier punto dentro de la tubería de manejo de la petición.
+
+A pesar de que Express es en sí mismo bastante minimalista, los desarrolladores han creado paquetes de middleware compatibles para abordar casi cualquier problema de desarrollo web. Por lo tanto, Express es una infraestructura web rápida, minimalista y flexible para las aplicaciones Node.js. En general, se prefiere “Express” a “Express.js”, aunque esta también se acepta.
+
+## Instalando ExpresJS
+
+1. Lo primero que deben se debe hacer es instalar NodeJS si no se tiene instalado en el equipo.
+2. Posteriormente, se debe inicar un proyecto con ```npm init -y```
+3. Ahora, se debe instalar express con: ```npm install express --save``` 
+4. Para crear el primer programa con el servidor local en express, se debe crear un archivo denominado (por ejemplo) app.js y añadir el código siguiente:
+   
+```JS
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('Mensaje desde NodeJS y ExpressJS');
+});
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
+```
+*Nota* La aplicación inicia un servidor y escucha las conexiones en el puerto 3000. La aplicación responde con “Mensaje desde NodeJS y ExpressJS” para las solicitudes al URL raíz (/) o a la ruta raíz. Para cada vía de acceso diferente, responderá con un error 404 Not Found. Es importante destacar que req (solicitud) y res (respuesta) son exactamente los mismos objetos que proporciona NodeJS, por lo que puede invocar req.pipe(), req.on('data', callback) y cualquier otro objeto que invocaría sin estar Express implicado.
+5. Ejecute la aplicación con el siguiente comando:
+
+```bash
+$ node app.js
+```
+6. A continuación, cargue http://localhost:3000/ en un navegador para ver la salida.
