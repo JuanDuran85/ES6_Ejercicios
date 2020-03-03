@@ -3,3 +3,7 @@ node_modules
 ejercicio_1/node_modules
 ejercicio_2/node_modules
 ejercicio_3/node_modules
+.DS_Store
+ejercicio_1/.DS_Store
+ejercicio_2/.DS_Store
+ejercicio_3/.DS_Store
