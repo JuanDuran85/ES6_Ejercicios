@@ -229,7 +229,7 @@ A pesar de que Express es en sí mismo bastante minimalista, los desarrolladores
 1. Lo primero que deben se debe hacer es instalar NodeJS si no se tiene instalado en el equipo.
 2. Posteriormente, se debe inicar un proyecto con ```npm init -y```
 3. Ahora, se debe instalar express con: ```npm install express --save``` 
-4. Para crear el primer programa con el servidor local en express, se debe crear un archivo denominado (por ejemplo) app.js y añadir el código siguiente:
+4. Para crear el primer programa con el servidor local en express, se debe crear un archivo denominado app.js y añadir el código siguiente:
    
 ```JS
 var express = require('express');
@@ -247,6 +247,28 @@ app.listen(3000, function () {
 5. Ejecute la aplicación con el siguiente comando:
 
 ```bash
-$ node app.js
+node app.js
 ```
 6. A continuación, cargue http://localhost:3000/ en un navegador para ver la salida.
+
+## Instalando el generador de proyectos de ExpressJS
+
+1. Instalar globalmente el generador de express, la cual, es una herramienta de generador de aplicaciones para crear rápidamente un esqueleto de aplicación. con:
+   
+```bash
+npm install express-generator -g
+```
+
+1. Una vez instalado el express generator globalmente, se debe crear una aplicación con Express denominada (por ejemplo) "ejercicio_5". Por lo tanto, la aplicación será creada en una carpeta llamada ejercicio_5 en el directorio de trabajo actual y el motor de vistas en este caso será asignado a Pug, para realizar todo eso se debe ingresar el comando en el terminal:
+
+```bash
+express --view=pug ejercicio_5
+```
+
+2. Luego, ingresamos a la carpeta que se creó en el paso anterior y dentro de esta, en el terminal ejecutamos: ```npm install```
+3. Para ejecutar la aplicacion creada, se debe compilar el proyecto mediante los comandos:
+   
+   - En MacOS o Linux, ejecute la aplicación con este mandato: ```DEBUG=myapp:* npm start```
+   - En Windows, utilice este mandato: ```set DEBUG=myapp:* & npm start```
+
+4. A continuación, cargue http://localhost:3000/ en el navegador para acceder a la aplicación.
