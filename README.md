@@ -259,17 +259,18 @@ node app.js
 npm install express-generator -g
 ```
 
-1. Una vez instalado el express generator globalmente, se debe crear una aplicación con Express denominada (por ejemplo) "ejercicio_5". Por lo tanto, la aplicación será creada en una carpeta llamada ejercicio_5 en el directorio de trabajo actual y el motor de vistas en este caso será asignado a Pug, para realizar todo eso se debe ingresar el comando en el terminal:
+2. Una vez instalado el express generator globalmente, se debe crear una aplicación con Express denominada (por ejemplo) "ejercicio_5". Por lo tanto, la aplicación será creada en una carpeta llamada ejercicio_5 en el directorio de trabajo actual y el motor de vistas en este caso será asignado a Pug, para realizar todo eso se debe ingresar el comando en el terminal:
 
 ```bash
 express --view=pug ejercicio_5
 ```
 
-*Nota*: pug es 
-2. Luego, ingresamos a la carpeta que se creó en el paso anterior y dentro de esta, en el terminal ejecutamos: ```npm install```
-3. Para ejecutar la aplicacion creada, se debe compilar el proyecto mediante los comandos:
+*Nota*: pug es un motor de plantillas de alto rendimiento, robusto, elegante y rico en funciones. Fue influenciado por Haml e implementado con JavaScript para Node.js y navegadores. 
+
+1. Luego, ingresamos a la carpeta que se creó en el paso anterior y dentro de esta, en el terminal ejecutamos: ```npm install```
+2. Para ejecutar la aplicacion creada, se debe compilar el proyecto mediante los comandos:
    
    - En MacOS o Linux, ejecute la aplicación con este mandato: ```DEBUG=myapp:* npm start```
    - En Windows, utilice este mandato: ```set DEBUG=myapp:* & npm start```
 
-4. A continuación, cargue http://localhost:3000/ en el navegador para acceder a la aplicación.
+3. A continuación, cargue http://localhost:3000/ en el navegador para acceder a la aplicación.
