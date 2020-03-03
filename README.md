@@ -265,6 +265,7 @@ npm install express-generator -g
 express --view=pug ejercicio_5
 ```
 
+*Nota*: pug es 
 2. Luego, ingresamos a la carpeta que se creó en el paso anterior y dentro de esta, en el terminal ejecutamos: ```npm install```
 3. Para ejecutar la aplicacion creada, se debe compilar el proyecto mediante los comandos:
    
