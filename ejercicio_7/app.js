@@ -1,9 +1,6 @@
 // se llama o solicita la libreria de express con el require
 import express from 'express';
 
-// se utiliza el express creado mediante el llamado como funcion
-let app = express();
-
 // llamando a la libreria de morgan
 import morgan from 'morgan';
 
@@ -13,6 +10,26 @@ import path from 'path';
 // se agregar cors al servidor
 import cors from "cors";
 
+// se utiliza el express creado mediante el llamado como funcion
+let app = express();
+
+//conexion a la base de datos
+import mongoose from 'mongoose';
+// url de la base de datos
+const uri = 'mongodb://localhost:27017/myapp';
+// opciones con propiedades. se pueden encontrar en https://mongoosejs.com/docs/index.html
+const options = {
+    useNewUrlParser: true, 
+    useCreateIndex: true,
+    useUnifiedTopology: true
+};
+
+// Usando promises (promesas)
+mongoose.connect(uri, options, function(error) {
+    // Check error in initial connection. There is no 2nd param to the callback.
+    console.log("conectado");
+    console.log(error);
+});
 
 // express utilizara la libreria de morgan con la configuracion tiny (configuracion recomendada por la pagina de express)
 app.use(morgan('tiny'));
