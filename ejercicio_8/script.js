@@ -38,7 +38,7 @@ const setTexto2 = datos => {
 };
 
 //simular que se obtiene información de una API
-const getData = () => {
+const getData2 = () => {
     return new Promise((resolve,reject)=>{
         setTexto2('Solicitando Autorización');
         setTimeout(()=>{
@@ -47,7 +47,7 @@ const getData = () => {
     });
 };
 
-const mostrarData = () => {
+const mostrarData2 = () => {
     return new Promise((resolve,reject)=> {
         setTexto2('Esperando la información');
         setTimeout(()=>{
@@ -56,13 +56,13 @@ const mostrarData = () => {
     });
 };
 
-boton.addEventListener('click',()=>{
-    getData(autorizar => {
+boton2.addEventListener('click',()=>{
+    getData2().then(autorizar => {
         if(autorizar){
-            mostrarData(usuario => {
-                setTexto2(usuario.nombre);
-            });
-        }
-    });
+            return mostrarData2();
+        };
+    }).then(usuario => {
+        setTexto2(usuario.nombre);
+    });; //en then recibe como argumento la respuesta de datos
 });
 
