@@ -1,3 +1,4 @@
+//-----------------CALLBACKS---------------//
 // callbacks son funciones que pueden ser llamadas dentro de otra funcion para poder ejecutar un proceso de manera sincrona. Se le puede enviar a una funcion otra funcion para que sea ejecutada durante el procesod e la funcion inicial.
 
 // se va a simular que se estan haciendo distintas tareas de manera sincrona al ejecutar el boton.
@@ -7,17 +8,17 @@ const setTexto = datos => {
 };
 
 //simular que se obtiene información de una API
-const getData = funcion1 => {
+const getData = patito => {
     setTexto('Solicitando Autorización');
     setTimeout(()=>{
-        funcion1(true);
+        patito(false);
     },2500);
 };
 
-const mostrarData = funcion2 => {
+const mostrarData = patito2 => {
     setTexto('Esperando la información');
     setTimeout(()=>{
-        funcion2({nombre:"Juan"});
+        patito2({nombre:"Juan"});
     },2500);
 };
 
@@ -27,9 +28,13 @@ boton.addEventListener('click',()=>{
             mostrarData(usuario => {
                 setTexto(usuario.nombre);
             });
+        }else{
+            setTexto("No hay patito");
         }
     });
 });
+
+//-----------------PROMESAS---------------//
 
 // las promesas permiten ejecutar funciones de manera sincrona de una manera mas rapida y limpia. Las promesas son un objeto, que reciben una funcion que tendrá dos objetos de manera interna. Uno que permite resolver la primera (continuar con el proceso que se esta realizando) o rechazar la promesa que se esta llevando al momento. En esta caso, las promesas no necesitan enviar o recibir una funcion para que se ejecuten.
 
