@@ -1,4 +1,6 @@
+//importando mongoose
 import mongoose from 'mongoose';
+//se utiliza el metodo Schema de mongoose
 const Schema = mongoose.Schema;
 
 const notaSchema = new Schema({

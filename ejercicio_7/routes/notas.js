@@ -1,4 +1,6 @@
+//importando express
 import express from 'express';
+//utilizando la funcion de Router() de express.
 const router = express.Router();
 
 // importar el modelo nota
