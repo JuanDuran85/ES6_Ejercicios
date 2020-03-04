@@ -7,5 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="/users" method="post">
+      Nombre: <input type="text" name="nombre" id="nombre">
+      Apellido: <input type="text" name="apellido" id="apellido">
+      Correo: <input type="email" name="correo" id="correo">
+      Clave: <input type="password" name="clave" id="clave">
+      <input type="submit" value="Enviar">
+    </form>
   </body>
 </html>
