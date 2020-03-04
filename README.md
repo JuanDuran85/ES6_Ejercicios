@@ -186,13 +186,13 @@ Para mayor informacion, pueden visitar:
 
 Se plantea que el principal protagonista sean las clases. Colección de objetos que están interrelacionados y trabajan conjuntamente para resolver un problema. Se basa en lo cotidiano para dar posibles soluciones a problemas.
 
-* ¿Qué es una clase? 
+* ¿Qué es una clase?
 Plantillas para la creación de objetos. Características, atributos, propiedades.
 
-* ¿Qué es un objeto? 
+* ¿Qué es un objeto?
 Tienen los métodos y funciones.
 
-* ¿Qué es una instancia? 
+* ¿Qué es una instancia?
 Creación del objeto o inicio de un objeto a partir de una clase.
 
 * ¿Qué es un método?
@@ -203,13 +203,14 @@ Operación que se realiza en el objeto, instrucciones.
 
 ### Método static en ES6
 
-Un método estático se construye simplemente indicando la palabra "static" antes del nombre del método que se está creando. El resto de la definición de un método estático sería igual que la definición de un método convencional, con la excepción de disponer de la variable "this" como habitualmente en los métodos. 
+Un método estático se construye simplemente indicando la palabra "static" antes del nombre del método que se está creando. El resto de la definición de un método estático sería igual que la definición de un método convencional, con la excepción de disponer de la variable "this" como habitualmente en los métodos.
 
 Los métodos estáticos se suelen utilizar para crear funciones de apoyo que realicen tareas concretas o genéricas, que queremos incluir en la clase porque están relacionadas con la clase en cuestión, es decir, que pueden ser invocados desde la clase sin necesidad de que se cree una instancia de la misma. Para ello tenemos que poner la palabra static antes del nombre del método.
 
 Nota: El hecho de no poder disponer de "this" dentro de un método estático es debido a que el método no se invoca con relación a ningún objeto.
 
 ## Para mayor información, visita:
+
 * [Caracteristicas de las clases en ES6](https://lenguajejs.com/p/javascript/caracteristicas/clases-es6)
 
 
@@ -228,9 +229,9 @@ A pesar de que Express es en sí mismo bastante minimalista, los desarrolladores
 
 1. Lo primero que deben se debe hacer es instalar NodeJS si no se tiene instalado en el equipo.
 2. Posteriormente, se debe inicar un proyecto con ```npm init -y```
-3. Ahora, se debe instalar express con: ```npm install express --save``` 
+3. Ahora, se debe instalar express con: ```npm install express --save```
 4. Para crear el primer programa con el servidor local en express, se debe crear un archivo denominado app.js y añadir el código siguiente:
-   
+
 ```JS
 var express = require('express');
 var app = express();
@@ -243,12 +244,14 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
 ```
+
 *Nota* La aplicación inicia un servidor y escucha las conexiones en el puerto 3000. La aplicación responde con “Mensaje desde NodeJS y ExpressJS” para las solicitudes al URL raíz (/) o a la ruta raíz. Para cada vía de acceso diferente, responderá con un error 404 Not Found. Es importante destacar que req (solicitud) y res (respuesta) son exactamente los mismos objetos que proporciona NodeJS, por lo que puede invocar req.pipe(), req.on('data', callback) y cualquier otro objeto que invocaría sin estar Express implicado.
 5. Ejecute la aplicación con el siguiente comando:
 
 ```bash
 node app.js
 ```
+
 6. A continuación, cargue http://localhost:3000/ en un navegador para ver la salida.
 
 ## Instalando el generador de proyectos de ExpressJS
