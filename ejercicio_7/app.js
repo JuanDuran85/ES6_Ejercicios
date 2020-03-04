@@ -25,11 +25,14 @@ const options = {
 };
 
 // Usando promises (promesas)
-mongoose.connect(uri, options, function(error) {
-    // Check error in initial connection. There is no 2nd param to the callback.
-    console.log("conectado");
-    console.log(error);
-});
+mongoose.connect(uri, options).then(
+    ()=>{
+        console.log("conectado a la base de datos");
+    },
+    err => {
+        console.log(err);
+    }
+)
 
 // express utilizara la libreria de morgan con la configuracion tiny (configuracion recomendada por la pagina de express)
 app.use(morgan('tiny'));
@@ -39,7 +42,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //se accede a la ruta principal accediendo a la ruta entregada por el servidor
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/api', require('./routes/notas'));
 // se llama a una ruta en especifico, luego se pasa una funcion que recibe dos parametros.
 app.get('/',function (req,res) {  
     res.send("Mensaje desde Express como Servidor local");
