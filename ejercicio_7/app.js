@@ -1,17 +1,17 @@
 // se llama o solicita la libreria de express con el require
-let express = require('express');
+import express from 'express';
 
 // se utiliza el express creado mediante el llamado como funcion
 let app = express();
 
 // llamando a la libreria de morgan
-let morgan = require('morgan');
+import morgan from 'morgan';
 
 // para acceder al directorio actual
-let path = require('path');
+import path from 'path';
 
 // se agregar cors al servidor
-let cors = require("cors");
+import cors from "cors";
 
 
 // express utilizara la libreria de morgan con la configuracion tiny (configuracion recomendada por la pagina de express)
@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
 //se trabaja con solicitudes o respuestas www
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 //se accede a la ruta principal accediendo a la ruta entregada por el servidor
 app.use(express.static(path.join(__dirname, 'public')));
 
