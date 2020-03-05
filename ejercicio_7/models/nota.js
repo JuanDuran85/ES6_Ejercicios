@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const notaSchema = new Schema({
+  //modelo que tiene la estructura de la nota
   nombre: {type: String, required: [true, 'Nombre obligatorio']},
   descripcion: String,
   usuarioId: String,
