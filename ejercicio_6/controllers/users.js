@@ -8,6 +8,6 @@ exports.user_create = function(req, res, next) {
       res.json(newUsers);
     });
   } else {
-    res.json({ status: "ERROR", message: "Debe completar todos loscampos" });
+    res.json({ status: "ERROR", message: "Debe completar todos los campos" });
   }
 };

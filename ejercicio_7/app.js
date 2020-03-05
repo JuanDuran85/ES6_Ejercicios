@@ -1,4 +1,4 @@
-// se llama o solicita la libreria de express con el require
+// se llama o solicita la libreria de express con el require en versiones viejas de JS o con import para versiones nuevas (EJS), pero se debe instalar babel.
 import express from 'express';
 
 // llamando a la libreria de morgan
@@ -34,7 +34,7 @@ mongoose.connect(uri, options).then(
     }
 )
 
-// express utilizara la libreria de morgan con la configuracion tiny (configuracion recomendada por la pagina de express)
+// express utilizara la libreria de morgan con la configuracion tiny (configuracion recomendada por la página de express)
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
