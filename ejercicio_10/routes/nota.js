@@ -18,6 +18,33 @@ router.post('/nueva-nota', async(req, res) => {
   }
 });
 
+// Get con parámetros
+router.get('/nota/:id', async(req, res) => {
+  const _id = req.params.id;
+  try {
+    const notaDB = await Nota.findOne({_id});
+    res.json(notaDB);
+  } catch (error) {
+    return res.status(400).json({
+      mensaje: 'Ocurrio un error',
+      error
+    })
+  }
+});
+
+// Get con todos los documentos
+router.get('/nota', async(req, res) => {
+  try {
+    const notaDb = await Nota.find();
+    res.json(notaDb);
+  } catch (error) {
+    return res.status(400).json({
+      mensaje: 'Ocurrio un error',
+      error
+    })
+  }
+});
+
 // Exportamos la configuración de express app
 module.exports = router;
 
