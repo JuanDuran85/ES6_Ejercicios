@@ -1,20 +1,19 @@
 var express = require("express");
-var userController = require("../controllers/users");
+
 var router = express.Router();
 
 /* Post user  */ 
-router.post("/", function(req, res, next) {
-  let name = req.body.nombre;
-  let lastname = req.body.apellido;
-  let email = req.body.correo;
-  let password = req.body.clave;
-  let datos = {
-    nombres : name,
-    apellidos : lastname,
-    correos : email,
-    clave: password
-  }
-  userController.user_create(req, res, next);
-});
+// router.post("/ejemplo",  async(req, res) => {
+//   const body = req.body;  
+//   try {
+//     const notaDB = await User.create(body);
+//     res.status(200).json(notaDB); 
+//   } catch (error) {
+//     return res.status(500).json({
+//       mensaje: 'Ocurrio un error',
+//       error
+//     })
+//   }
+// });
 
 module.exports = router;
