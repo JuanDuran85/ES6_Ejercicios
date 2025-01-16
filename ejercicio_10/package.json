@@ -15,7 +15,7 @@
     "express": "~4.21.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "mongoose": "^5.13.20"
+    "mongoose": "^8.9.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
