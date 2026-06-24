@@ -17,10 +17,10 @@
     "express": "^4.22.2",
     "mongoose": "^8.9.5",
     "morgan": "^1.10.1",
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.8.6",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.6"
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/node": "^8.0.1",
+    "@babel/preset-env": "^8.0.2"
   },
   "devDependencies": {}
 }
