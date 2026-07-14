@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.22.2",
     "mongoose": "^8.9.5",
-    "morgan": "^1.10.1",
+    "morgan": "^1.11.0",
     "@babel/cli": "^8.0.1",
     "@babel/core": "^8.0.1",
     "@babel/node": "^8.0.1",
